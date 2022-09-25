@@ -146,7 +146,8 @@ COPY pyproject.toml pdm.lock /project/
 
 # install dependencies and project
 WORKDIR /project
-RUN python -m pdm install --prod --no-lock --no-editable
+RUN pdm install --prod --no-lock --no-editable
+
 
 # run stage
 FROM python-base
